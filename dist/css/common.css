@@ -1,0 +1,150 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Links
+# Menu
+# Footer
+# Helpers
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Page
+--------------------------------------------------------------*/
+div#page {
+  background: #fafafa;
+  padding-bottom: 100px;
+}
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: inherit;
+  transition: color 0.2s ease 0s;
+}
+a:hover {
+  color: $brand-primary;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Menu
+--------------------------------------------------------------*/
+.sandwich.menu {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: fixed;
+  background: rgba(10,10,10,0.1);
+  top: 20px;
+  left: 20px;
+  z-index: 99999;
+  font-size: 25px;
+  cursor: pointer;
+  color: #666;
+}
+.sandwich.menu:hover {
+  color: #333;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer.site-footer {
+  background: #2f2f2f;
+  width: 100%;
+  min-height: 400px;
+  color: #ececec;
+  padding: 90px 0;
+}
+  footer.site-footer h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  footer.site-footer a {
+    color: inherit;
+    transition: color 0.2s ease 0s;
+  }
+  footer.site-footer a:hover, footer.site-footer a:focus {
+    color: $brand_primary;
+    text-decoration: none;
+  }
+
+section.widget {
+  margin-bottom: 20px;
+}
+/****** SPECIFIC WIDGETS *************/
+.widget_categories ul {
+    list-style-type: square;
+    padding: 0 0 0 20px;
+    margin: 0;
+  }
+
+.recent-posts-widget-with-thumbnails .rpwwt-post-date {
+    font-size: 90%;
+    color: #9a9a9a;
+  }
+
+  .widget_taxonomy_list_widget span {
+    display: inline-block;
+    margin: 7px 2px;
+  }
+  .widget_taxonomy_list_widget a {
+    padding: 7px 16px 7px 20px;
+    background: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 2px 6px 0;
+    position: relative;
+    font-size: 80%;
+    transition: background 0.2s ease 0s, color 0.2s ease 0s;
+  }
+  .widget_taxonomy_list_widget a::before {
+    background: #262b2f none repeat scroll 0 0;
+    border-radius: 100%;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    left: 10px;
+    margin-top: -3px;
+    position: absolute;
+    top: 50%;
+    width: 6px;
+  }
+  .widget_taxonomy_list_widget a:hover, .widget_taxonomy_list_widget a:focus {
+    background: $brand-primary;
+    color: #ffffff !important;
+  }
+
+}
+
+/*--------------------------------------------------------------
+# Helpers
+--------------------------------------------------------------*/
+.white-bg {
+  background: white;
+}
+.box {
+  background: #ffffff;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+  padding-left: 0;
+  padding-right: 0;
+  transition: box-shadow 0.35s ease 0s;
+}
+.box > .header {
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 360px;
+  }
+.card.box {
+  border-bottom: none;
+}
+/*--------------------------------------------------------------
+# Box effects
+--------------------------------------------------------------*/
+
+.box:hover {
+  box-shadow: 0 2px 0 rgba(228,55,117,1);
+}
+

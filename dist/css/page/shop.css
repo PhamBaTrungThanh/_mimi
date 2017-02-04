@@ -1,0 +1,240 @@
+#shoppage {
+	margin-top: 80px;
+}
+ul.mimi--woo.categories-selector {
+	list-style: outside none none;
+	padding-left: 0;
+	font-size: 0;
+}
+    ul.mimi--woo.categories-selector > li {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+		display: inline-block;
+		font-size: 1.125rem;
+		margin: 0;
+		transition: border 150ms ease 0s;
+    }
+    ul.mimi--woo.categories-selector > li:hover, ul.mimi--woo.categories-selector > li.current-cat {
+      border-bottom-color: rgba(228,55,117,1);
+    }
+    ul.mimi--woo.categories-selector > li > a {
+		color: #b3b3b3;
+		display: block;
+		outline: 0 none;
+		padding: 0.625rem 0.9375rem;
+		text-decoration: none;
+		transition: color 150ms ease 0s;
+    }
+    ul.mimi--woo.categories-selector > li.current-cat > a, ul.mimi--woo.categories-selector > li > a:hover {
+		color: rgba(228,55,117,1);
+    }
+    ul.mimi--woo.categories-selector > li.product_search {
+		position: relative;
+  	}
+    ul.mimi--woo.categories-selector > li.product_search > div.search-icon {
+		fill: rgba(179, 179, 179, 1);
+		display: block;
+		font-size: 1.25rem;
+		height: 49px;
+		width: 62px;
+		line-height: 49px;
+		padding: 0 0.9375rem;
+    }
+    .woocommerce-product-search {
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+    .woocommerce-product-search > label {
+        display: none;
+    }
+	.woocommerce-product-search > input[type="submit"] {
+		height: 49px;
+		left: 0;
+		margin: 0;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		width: 49px;
+		cursor: pointer;
+	}
+    .woocommerce-product-search #woocommerce-product-search-field {
+		-moz-border-bottom-colors: none;
+		-moz-border-left-colors: none;
+		-moz-border-right-colors: none;
+		-moz-border-top-colors: none;
+		background-color: transparent;
+		border-color: -moz-use-text-color -moz-use-text-color rgba(0, 0, 0, 0.05);
+		border-image: none;
+		border-radius: 0;
+		border-style: none none solid;
+		border-width: medium medium 1px;
+		height: 50px;
+		margin: 0 0 0 58px;
+		padding: 0;
+		text-indent: 20px;
+		transition: width 300ms ease 0s;
+		width: 0;
+	}
+    .woocommerce-product-search #woocommerce-product-search-field:focus {
+    	box-shadow: none;
+    }
+    li.product_search:hover .woocommerce-product-search #woocommerce-product-search-field {
+		border-bottom-color: rgba(228,55,117,1);
+		width: 250px;
+    }
+	#filter-button {
+		padding-right: 20px;
+		padding-top: 10px;
+	}
+	#filter-button .filter-icon-svg {
+		transition: fill 0.2s ease 0s;
+	}
+	a#filter-button-action:hover #filter-path-1, a#filter-button-action:hover #filter-path-2, a#filter-button-action.active #filter-path-1, a#filter-button-action.active #filter-path-2 {
+		fill: rgba(228,55,117,1);
+	}
+	#filter_panel.show {
+		display: block !important;
+	}
+
+
+	.grid-item {
+		padding: 10px;
+	}
+	.grid-item-container {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background: #ffffff;
+	}
+	.grid-item-content {
+		background: #ffffff none repeat scroll 0 0;
+    	position: relative;
+    	z-index: 2;
+	}
+	.grid-item-hover {
+		background: #5AF;
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		transition: top 0.2s ease 0s, left 0.2s ease 0s;
+	}
+	.grid-item-container:hover > .grid-item-content {
+		z-index: 5;
+	}
+	.grid-item-container:hover > .grid-item-hover {
+		top: -40px;
+		left: 40px;
+		z-index: 4;
+	}
+
+	.grid-item-hover > .top {
+		height: 40px;
+		text-align: right;
+		padding-right: 40px;
+		width: 100%;
+		clear: both;
+		float: left;
+	}
+	.grid-item-hover > .right {
+		height: 100%;
+		width: 40px;
+		float: right;
+		clear: both;
+	}
+	.grid-item-hover .item-icon {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		display: block;
+		text-align: center;
+		cursor: pointer;
+		transition: background 0.2s ease 0s;
+		background: #5af;
+		position: relative;
+	}
+	.grid-item-hover > .top > .item-icon {
+		display: inline-block;
+	}
+	.grid-item-hover > .right > .item-icon:hover {
+		background: rgba(255,255,255,0.2);
+	}
+	.grid-item-hover > .right > .item-icon:after {
+		position: relative;
+	    background: #5af none repeat scroll 0 0;
+	    color: #ffffff;
+	    content: attr(data-text);
+	    display: block;
+	    height: 40px;
+	    margin-left: 40px;
+	    margin-top: -40px;
+	    transform: translateX(-100px);
+	    transition: transform 0.2s ease 0s;
+	    width: 100px;
+	    z-index: -1;
+	}
+	.grid-item-hover > .right > .item-icon:hover:after {
+		transform: translateX(0);
+	}
+	.grid-item-hover .item-icon > i {
+		color: #ffffff;
+	}
+
+	.grid-item-hover > .right > .item-icon.cart-link:after {
+		content: 'Cho vào giỏ';
+	}
+	.grid-item-hover > .right > .item-icon.cart-link.added + .added_to_cart.wc-forward, .grid-item-hover > .right > .item-icon.cart-link.loading + .added_to_cart.wc-forward {
+		display: none;
+	}
+	.grid-item-hover > .right > .item-icon.cart-link.added:after {
+		content: 'Đã mua';
+	}
+	.grid-item-hover > .right > .item-icon.cart-link.loading:after {
+		content: 'Đang mua';
+	}
+	.grid-item-hover > .right > .item-icon.cart-link.added > i:before {
+		content: '\e810';
+	}
+	.grid-item-content .inside {
+	    bottom: 0;
+	    position: absolute;
+	    width: 100%;
+	    background: #ffffff;
+		transition: transform 0.2s ease 0s;
+		padding: 3px 5px;
+	}
+	.grid-item-content .outside {
+		padding: 20px 0;
+    	text-align: center;
+	}
+	.grid-item-container:hover > .grid-item-content .inside {
+		transform: translateY(100%);
+	}
+	.grid-item-content .inside > span.product-title {
+		color: #2d434e;
+	    font-size: 1.25em;
+	    line-height: 1.25em;
+	}
+	.grid-item-content .inside > span.price {
+	    color: #77a464;
+	    float: right;
+	    font-size: 1.25em;
+	    line-height: 1.22em;
+	}
+	.grid-item-content .thumbnail-container {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.grid-item-content .thumbnail-container > img {
+		transition: transform 0.2s ease 0s;
+		transform-origin: center center;
+	}
+	.grid-item-container:hover > .grid-item-content .thumbnail-container > img {
+		transform: scale(1.05);
+	}
