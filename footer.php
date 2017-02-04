@@ -20,13 +20,16 @@
 				<div class="col-xs-12 col-md-4"><?php dynamic_sidebar('sidebar-footer-right'); ?></div>
 			</div>
 		</div>
-		<div class="container">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mimi' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'mimi' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'mimi' ), 'mimi', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
-			</div><!-- .site-info -->
+		<div id="copyright-info">
+			<div class="container">
+				<div class="site-info">
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mimi' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'mimi' ), 'WordPress' ); ?></a>
+					<span class="sep"> | </span>
+					<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'mimi' ), 'mimi', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
+				</div><!-- .site-info -->
+			</div>			
 		</div>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

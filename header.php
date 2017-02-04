@@ -22,4 +22,4 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<div id="container">
-	
+	<header id="header"></header>

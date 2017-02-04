@@ -130,6 +130,7 @@
 
   /**************/
   if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+    $('body').addClass('mobile');
     $('#ios-notice').removeClass('hidden');
     $('.parallax-container').height( $(window).height() * 0.5 | 0 );
   } else {

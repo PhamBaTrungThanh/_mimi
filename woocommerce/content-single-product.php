@@ -36,9 +36,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 }
 ?>
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(''); ?>>
-  <div class="row">
-    <div class="col-xs-12 col-lg-6">
-      <div class="box">
+  <div class="row" role="product-header">
+    <div class="col main-product-title title-dash-container">
+      <h1 class="title-dash"><?php the_title(); ?></h1>
+    </div>
+  </div>
+  <div class="row" role="product-content">
+    <div class="col-xs-12 col-md-6">
+      <div class="box product-images">
         <?php
           /**
            * woocommerce_before_single_product_summary hook.
@@ -51,9 +56,9 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </div>
 
-    <div class="col-xs-12 col-lg-6">
+    <div class="col-xs-12 col-md-6">
       <div class="summary entry-summary">
-        <div class="box breadcum">
+        <div class="box breadcumb">
           <?php woocommerce_breadcrumb(['home' => '', 'before' => '<span>', 'after' => '</span>']); ?>
         </div>
         <div class="box title-box">
@@ -88,19 +93,25 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div><!-- .summary -->
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="woocommerce_after_single_product_summary row">
-        <div class="col-xs-12">
-          <div class="box">
-            <?php woocommerce_output_product_data_tabs();?>
+  <div class="row" role="product-footer">
+    <div class="col-12">
+      <div class="woocommerce_after_single_product_summary">
+        <div class="row">
+          <div class="col-12">
+            <div class="box">
+              <?php woocommerce_output_product_data_tabs();?>
+            </div>
+          </div>          
+        </div>
+        <div class="row">          
+          <div class="col-12">
+              <?php woocommerce_upsell_display(); ?>
           </div>
         </div>
-        <div class="col-xs-12">
-            <?php woocommerce_upsell_display(); ?>
-        </div>
-        <div class="col-xs-12">
-          <?php woocommerce_output_related_products(); ?>
+        <div class="row">
+          <div class="col-12">
+            <?php woocommerce_output_related_products(); ?>
+          </div>          
         </div>
       </div>
     </div>
