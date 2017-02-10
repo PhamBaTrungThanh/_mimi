@@ -84,8 +84,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
       </div>
       <div class="row">
-        <div class="col-xs">
-          <h1 class="section-title"><?php woocommerce_page_title(); ?></h1>
+        <div class="col-xs title-dash-container">
+          <h1 class="section-title title-dash"><?php woocommerce_page_title(); ?></h1>
         </div>
       </div>
     <?php endif; ?>

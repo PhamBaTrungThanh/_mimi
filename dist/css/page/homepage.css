@@ -27,3 +27,11 @@ body.home .title-content {
 	text-align: center;
 	color: #ffffff;
 }
+body.home main#main {
+	max-width: unset;
+	padding: 0;
+	margin-top: 0;
+}
+body.home .intro-effect-push > .awesome-title, .intro-effect-push .awesome-content > main {
+	transform: translateY(0);
+}

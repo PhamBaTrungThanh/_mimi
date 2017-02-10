@@ -65,7 +65,7 @@
     isRevealed,
     noscroll,
     isAnimating,
-    container = document.getElementById( 'container' );
+    container = '#container';
 
   function scrollY() {
     return window.pageYOffset || docElem.scrollTop;
@@ -129,6 +129,7 @@
 
 
   /**************/
+  // Trigger paralax
   if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
     $('body').addClass('mobile');
     $('#ios-notice').removeClass('hidden');
@@ -139,6 +140,8 @@
       $('.parallax-container').height(parallaxHeight);
     }).trigger('resize');
   }
+  $(window).trigger('resize');
+  // Awesome Header trigger
   if ( $( container ).hasClass('animating-header') ) {
     // refreshing the page...
     var pageScroll = scrollY();
@@ -154,6 +157,25 @@
 
     window.addEventListener( 'scroll', scrollPage );
     $('button.trigger').on('click', function() { toggle( 'reveal' ); });
-
   };
+  // Gallery trigger
+  $('div[id^="gallery"].gallery').each(function(index, elem) {
+    var grid = new Masonry(elem, {
+      itemSelector: '.gallery-item',
+      gutter: 15
+    });
+    var imgLoad = new imagesLoaded(elem);
+    imgLoad.on('progress', function(instance, image) {
+      grid.layout();
+    })
+  });
+  // Tracking trigger
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91610966-1', 'auto');
+  ga('send', 'pageview');
+
 })(jQuery);

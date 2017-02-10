@@ -292,3 +292,8 @@ ul.mimi--woo.categories-selector {
 		padding: 20px;
 	}
 	
+
+body.woocommerce-order-received main#main {
+	padding: 20px;
+	background: #ffffff;
+}

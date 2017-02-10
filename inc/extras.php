@@ -95,3 +95,91 @@ function mimi_merge_querystring($url = null,$query = null,$recursive = false)
   // Find the original query string in the URL and replace it with the new one
   return str_replace($url_components['query'],http_build_query($merged_result),$url);
 }
+
+function primary_category_link() {
+
+  global $post;
+  $categories = get_the_category( $post->ID );
+  $primary = $categories[0];
+  echo '<a href="' . esc_url( get_category_link( $primary->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $primary->name ) ) . '" class="category ' . $primary->category_nicename . '">' . esc_html( $primary->name ) . '</a>';
+}
+add_action( 'after_setup_theme', 'mimi_woocommerce_support' );
+function mimi_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+function mimi_post_fields() {
+  if(function_exists("register_field_group"))
+    {
+      register_field_group(array (
+        'id' => 'acf_post',
+        'title' => 'Post',
+        'fields' => array (
+          array (
+            'key' => 'field_58417c195dcdc',
+            'label' => 'Extra post description',
+            'name' => 'extra_post_description',
+            'type' => 'text',
+            'instructions' => 'More text to display under the header',
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => '',
+          ),
+          array (
+            'key' => 'field_5841574c73c90',
+            'label' => 'Related Products',
+            'name' => 'related_products',
+            'type' => 'text',
+            'instructions' => 'Related product ids, separated by comma',
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => '',
+          ),
+          array (
+            'key' => 'field_5899b44a3ec4d',
+            'label' => 'Post Intro Effect',
+            'name' => 'post_intro_effect',
+            'type' => 'radio',
+            'instructions' => 'Choose one of these effects for this post',
+            'required' => 1,
+            'choices' => array (
+              'normal' => 'Normal',
+              'fadeout' => 'Fade out',
+              'sliced' => 'Sliced',
+              'side' => 'Side',
+              'sidefixed' => 'Side Fixed',
+              'jam3' => 'Jam3',
+            ),
+            'other_choice' => 0,
+            'save_other_choice' => 0,
+            'default_value' => '',
+            'layout' => 'vertical',
+          ),
+        ),
+        'location' => array (
+          array (
+            array (
+              'param' => 'post_type',
+              'operator' => '==',
+              'value' => 'post',
+              'order_no' => 0,
+              'group_no' => 0,
+            ),
+          ),
+        ),
+        'options' => array (
+          'position' => 'normal',
+          'layout' => 'default',
+          'hide_on_screen' => array (
+          ),
+        ),
+        'menu_order' => 0,
+      ));
+  }
+}
+add_action( 'init', 'mimi_post_fields', 0 );

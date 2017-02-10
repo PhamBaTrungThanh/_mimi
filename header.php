@@ -21,5 +21,5 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<div id="container">
+	<div id="pagewraper">
 	<header id="header"></header>

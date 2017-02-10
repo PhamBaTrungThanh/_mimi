@@ -10,21 +10,26 @@
 /*--------------------------------------------------------------
 # Page
 --------------------------------------------------------------*/
-div.wrap {
+div.wrap, div#primary {
   background: #fafafa;
+  padding-bottom: 50px;
 }
-.title-dash::after {
-  margin-top: 10px;
+.entry-title {
+  margin: 1rem 0;
+}
+.title-dash::after, .entry-title::after  {
+  background: #333333 none repeat scroll 0 0;
   content: "";
   display: block;
-  background: #333333;
-  width: 120px;
-  height: 10px;
+  height: 0.3rem;
+  margin-top: 10px;
   transition: width 0.2s ease 0s;
+  width: 6rem;
+  margin-bottom: 20px;
 }
-.title-dash-container:hover .title-dash::after {
+.title-dash-container:hover .title-dash::after, .entry-header:hover .entry-title::after{
   background: #000;
-  width: 150px;
+  width: 9rem;
 }
 
 /*--------------------------------------------------------------
@@ -66,17 +71,19 @@ a:hover {
 --------------------------------------------------------------*/
 header#header {
   height: 150px;
+  display: none;
 }
+header#header
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-footer.site-footer {
+footer#colophon {
   background: #2f2f2f;
   width: 100%;
   min-height: 400px;
   color: #ececec;
   padding: 90px 0;
-  position: relative;
+  position: relative !important;
 }
   footer.site-footer h3 {
     color: #ffffff;
@@ -144,8 +151,9 @@ section.widget {
   text-align: center;
   bottom: 0;
   left: 0;
-  position: absolute;
+  position: relative;
   right: 0;
+  color: #ffffff;
 }
 .site-info {
   font-size: 1rem;

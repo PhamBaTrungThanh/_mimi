@@ -8,12 +8,14 @@
 # Header
 --------------------------------------------------------------*/
 
-html, body, .header {
+html, body, .awesome-header, #pagewraper {
 	height: 100%;
 }
-
+div.wrap, div#primary {
+	background: unset !important;
+}
 /* Header */
-.header {
+.awesome-header {
 	position: relative;
 	margin: 0 auto;
 	min-height: 560px;
@@ -40,7 +42,7 @@ html, body, .header {
 	min-height: 100%;
 }
 
-.title {
+.awesome-title {
 	z-index: 1000;
 	margin: 0 auto;
 	padding: 0 1.25em;
@@ -53,7 +55,7 @@ html, body, .header {
 	transform: translateX(-50%) translateY(-50%);
 }
 
-.title h1 {
+.awesome-title h1 {
 	padding: 0 0 0.2em;
 	color: #fff;
 	font-weight: 800;
@@ -61,7 +63,7 @@ html, body, .header {
 	margin: 0 auto;
 }
 
-.title p {
+.awesome-title p {
 	color: #fff;
 	padding: 0 0 0.6em;
 	font-weight: 300;
@@ -69,12 +71,12 @@ html, body, .header {
 	margin: 0 auto;
 }
 
-.title h1,
-.title p.subline {
+.awesome-title h1,
+.awesome-title p.subline {
 	line-height: 1;
 }
 
-.title p.subline {
+.awesome-title p.subline {
 	font-size: 1.75em;
 }
 
@@ -140,7 +142,7 @@ button.trigger span::before {
 	width: 100%;
 	height: 100%;
 	color: #fff;
-	content: "\e802";
+	content: "\e801";
 	text-transform: none;
 	font-weight: normal;
 	font-style: normal;
@@ -153,31 +155,31 @@ button.trigger span::before {
 }
 
 /* Conent */
-.content {
+.awesome-content {
 	margin: 0 auto;
 	padding: 0 0 3em;
 }
 
-.content > div:not(.title) {
+.awesome-content > *:not(.awesome-title) {
 	margin: -80px auto 0;
 	max-width: 900px;
 	padding: 0 1.25em;
 }
 
-.content > div:not(.title) p {
+.awesome-content > *:not(.awesome-title) p {
 	margin: 0 auto 1.5em auto;
 }
 
-.content > div:not(.title) p:first-child {
+.awesome-content > *:not(.awesome-title) p:first-child {
 	font-size: 1.35em;
 }
 
-.content h3 {
+.awesome-content h3 {
 	margin: 0;
 	font-size: 1.4em;
 }
 
-.content blockquote {
+.awesome-content blockquote {
 	padding: 0.25em;
 	font-style: italic;
 	font-size: 1.65em;
@@ -185,11 +187,11 @@ button.trigger span::before {
 	line-height: 1.4;
 }
 
-.content blockquote::before {
+.awesome-content blockquote::before {
 	content: '\201C';
 }
 
-.content blockquote::after {
+.awesome-content blockquote::after {
 	content: '\201D';
 }
 
@@ -203,41 +205,41 @@ button.trigger span::before {
 	transition-property: top, left, right, bottom;
 }
 
-.intro-effect-jam3:not(.notrans) .header h1{
+.intro-effect-jam3:not(.notrans) .awesome-header h1{
 	-webkit-transition-property: color;
 	transition-property: color;
 }
 
 
-.intro-effect-jam3:not(.notrans) .header p {
+.intro-effect-jam3:not(.notrans) .awesome-header p {
 	-webkit-transition-property: color, opacity, -webkit-transform;
 	transition-property: color, opacity, transform;
 }
 
-.intro-effect-jam3:not(.notrans) .content > div {
+.intro-effect-jam3:not(.notrans) .awesome-content > * {
 	-webkit-transition-property: opacity, -webkit-transform;
 	transition-property: opacity, transform;
 }
 
 .intro-effect-jam3:not(.notrans) .bg-img,
-.intro-effect-jam3:not(.notrans) .header h1,
-.intro-effect-jam3:not(.notrans) .content > div {
+.intro-effect-jam3:not(.notrans) .awesome-header h1,
+.intro-effect-jam3:not(.notrans) .awesome-content > * {
 	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 }
 
-.intro-effect-jam3:not(.notrans) .header p,
-.intro-effect-jam3:not(.notrans) .header p.subline,
-.intro-effect-jam3:not(.notrans) .content > div {
+.intro-effect-jam3:not(.notrans) .awesome-header p,
+.intro-effect-jam3:not(.notrans) .awesome-header p.subline,
+.intro-effect-jam3:not(.notrans) .awesome-content > * {
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 }
 
-.intro-effect-jam3.modify:not(.notrans) .header p,
-.intro-effect-jam3.modify:not(.notrans) .header p.subline,
-.intro-effect-jam3.modify:not(.notrans) .content > div {
+.intro-effect-jam3.modify:not(.notrans) .awesome-header p,
+.intro-effect-jam3.modify:not(.notrans) .awesome-header p.subline,
+.intro-effect-jam3.modify:not(.notrans) .awesome-content > * {
 	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 }
@@ -263,56 +265,56 @@ button.trigger span::before {
 	left: 0;
 }
 
-.intro-effect-jam3.modify .header h1 {
+.intro-effect-jam3.modify .awesome-header h1 {
 	color: #514753;
 }
 
-.intro-effect-jam3 .header p {
+.intro-effect-jam3 .awesome-header p {
 	color: #514753;
 	opacity: 0;
 	-webkit-transform: translateY(150px);
 	transform: translateY(150px);
 }
 
-.intro-effect-jam3.modify .header p {
+.intro-effect-jam3.modify .awesome-header p {
 	opacity: 1;
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 }
 
-.intro-effect-jam3 .content {
+.intro-effect-jam3 .awesome-content {
 	padding: 0 5em 5em;
 }
 
-.intro-effect-jam3 .header,
-.intro-effect-jam3 .content {
+.intro-effect-jam3 .awesome-header,
+.intro-effect-jam3 .awesome-content {
 	background: #fff;
 }
 
-.intro-effect-jam3 .content > div {
+.intro-effect-jam3 .awesome-content > * {
 	opacity: 0;
 	-webkit-transform: translateY(150px);
 	transform: translateY(150px);
 }
 
-.intro-effect-jam3.modify .content > div {
+.intro-effect-jam3.modify .awesome-content > * {
 	opacity: 1;
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 }
 
 /* Delays */
-.intro-effect-jam3.modify:not(.notrans) .header p:nth-last-child(2) {
+.intro-effect-jam3.modify:not(.notrans) .awesome-header p:nth-last-child(2) {
 	-webkit-transition-delay: 0.1s;
 	transition-delay: 0.1s;
 }
 
-.intro-effect-jam3.modify:not(.notrans) .header p:last-child {
+.intro-effect-jam3.modify:not(.notrans) .awesome-header p:last-child {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
 
-.intro-effect-jam3.modify:not(.notrans) .content > div {
+.intro-effect-jam3.modify:not(.notrans) .awesome-content > * {
 	-webkit-transition-delay: 0.2s;
 	transition-delay: 0.2s;
 }
@@ -331,27 +333,27 @@ button.trigger span::before {
 	transition-property: opacity;
 }
 
-.intro-effect-fadeout:not(.notrans) .header h1 {
+.intro-effect-fadeout:not(.notrans) .awesome-header h1 {
 	-webkit-transition-property: color;
 	transition-property: color;
 }
 
-.intro-effect-fadeout:not(.notrans) .header p,
-.intro-effect-fadeout:not(.notrans) .content > div {
+.intro-effect-fadeout:not(.notrans) .awesome-header p,
+.intro-effect-fadeout:not(.notrans) .awesome-content > * {
 	-webkit-transition-property: -webkit-transform, opacity;
 	transition-property: transform, opacity;
 }
 
 .intro-effect-fadeout:not(.notrans) .bg-img,
 .intro-effect-fadeout:not(.notrans) .bg-img::after,
-.intro-effect-fadeout:not(.notrans) .header h1,
-.intro-effect-fadeout:not(.notrans) .header p,
-.intro-effect-fadeout:not(.notrans) .content > div {
+.intro-effect-fadeout:not(.notrans) .awesome-header h1,
+.intro-effect-fadeout:not(.notrans) .awesome-header p,
+.intro-effect-fadeout:not(.notrans) .awesome-content > * {
 	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 }
 
-.intro-effect-fadeout .header {
+.intro-effect-fadeout .awesome-header {
 	overflow: hidden;
 }
 
@@ -377,49 +379,49 @@ button.trigger span::before {
 	opacity: 1;
 }
 
-.intro-effect-fadeout .title {
+.intro-effect-fadeout .awesome-title {
 	text-align: left;
 	max-width: 900px;
 }
 
-.intro-effect-fadeout.modify .header h1,
-.intro-effect-fadeout .header p {
+.intro-effect-fadeout.modify .awesome-header h1,
+.intro-effect-fadeout .awesome-header p {
 	color: #514753;
 }
 
-.intro-effect-fadeout .header p {
+.intro-effect-fadeout .awesome-header p {
 	opacity: 0;
 }
 
-.intro-effect-fadeout .header p:nth-child(2) {
+.intro-effect-fadeout .awesome-header p:nth-child(2) {
 	-webkit-transform: translateX(150px);
 	transform: translateX(150px);
 }
 
-.intro-effect-fadeout .header p:nth-child(3) {
+.intro-effect-fadeout .awesome-header p:nth-child(3) {
 	-webkit-transform: translateX(-150px);
 	transform: translateX(-150px);
 }
 
-.intro-effect-fadeout.modify .header p:nth-child(2),
-.intro-effect-fadeout.modify .header p:nth-child(3) {
+.intro-effect-fadeout.modify .awesome-header p:nth-child(2),
+.intro-effect-fadeout.modify .awesome-header p:nth-child(3) {
 	opacity: 1;
 	-webkit-transform: translateX(0);
 	transform: translateX(0);
 }
 
-.intro-effect-fadeout .content {
+.intro-effect-fadeout .awesome-content {
 	z-index: 1000;
 	position: relative;
 }
 
-.intro-effect-fadeout .content > div {
+.intro-effect-fadeout .awesome-content > * {
 	opacity: 0;
 	-webkit-transform: translateY(350px);
 	transform: translateY(350px);
 }
 
-.intro-effect-fadeout.modify .content > div {
+.intro-effect-fadeout.modify .awesome-content > * {
 	opacity: 1;
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
@@ -430,41 +432,41 @@ button.trigger span::before {
 /* -------------------------- */
 
 .intro-effect-sliced:not(.notrans) .bg-img,
-.intro-effect-sliced:not(.notrans) .title {
+.intro-effect-sliced:not(.notrans) .awesome-title {
 	-webkit-transition-property: -webkit-transform;
 	transition-property: transform;
 }
 
-.intro-effect-sliced:not(.notrans) .header h1 {
+.intro-effect-sliced:not(.notrans) .awesome-header h1 {
 	-webkit-transition-property: color;
 	transition-property: color;
 }
 
-.intro-effect-sliced:not(.notrans) .header p {
+.intro-effect-sliced:not(.notrans) .awesome-header p {
 	-webkit-transition-property: opacity;
 	transition-property: opacity;
 }
 
-.intro-effect-sliced:not(.notrans) .content > div {
+.intro-effect-sliced:not(.notrans) .awesome-content > * {
 	-webkit-transition-property: -webkit-transform, opacity;
 	transition-property: transform, opacity;
 }
 
 .intro-effect-sliced:not(.notrans) .bg-img,
-.intro-effect-sliced:not(.notrans) .header h1,
-.intro-effect-sliced:not(.notrans) .title,
-.intro-effect-sliced:not(.notrans) .header p,
-.intro-effect-sliced:not(.notrans) .content > div{
+.intro-effect-sliced:not(.notrans) .awesome-header h1,
+.intro-effect-sliced:not(.notrans) .awesome-title,
+.intro-effect-sliced:not(.notrans) .awesome-header p,
+.intro-effect-sliced:not(.notrans) .awesome-content > *{
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 }
 
-.intro-effect-sliced.modify:not(.notrans) .header h1,
-.intro-effect-sliced.modify:not(.notrans) .title,
-.intro-effect-sliced.modify:not(.notrans) .header p,
-.intro-effect-sliced.modify:not(.notrans) .content > div {
+.intro-effect-sliced.modify:not(.notrans) .awesome-header h1,
+.intro-effect-sliced.modify:not(.notrans) .awesome-title,
+.intro-effect-sliced.modify:not(.notrans) .awesome-header p,
+.intro-effect-sliced.modify:not(.notrans) .awesome-content > * {
 	-webkit-transition-timing-function: ease;
 	transition-timing-function: ease;
 }
@@ -493,43 +495,43 @@ button.trigger span::before {
 	transform: translateY(100%);
 }
 
-.intro-effect-sliced .title {
+.intro-effect-sliced .awesome-title {
 	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.7);
 	transform: translateX(-50%) translateY(-50%) scale(0.7);
 }
 
-.intro-effect-sliced.modify .title {
+.intro-effect-sliced.modify .awesome-title {
 	-webkit-transform: translateX(-50%) translateY(-50%) scale(1);
 	transform: translateX(-50%) translateY(-50%) scale(1);
 }
 
-.intro-effect-sliced .header p {
+.intro-effect-sliced .awesome-header p {
 	opacity: 0;
 	color: #514753;
 }
 
-.intro-effect-sliced.modify .header p {
+.intro-effect-sliced.modify .awesome-header p {
 	opacity: 1;
 }
 
-.intro-effect-sliced.modify .header h1 {
+.intro-effect-sliced.modify .awesome-header h1 {
 	color: #514753;
 }
 
-.intro-effect-sliced .content > div {
+.intro-effect-sliced .awesome-content > * {
 	-webkit-transform: translateY(200px);
 	transform: translateY(200px);
 	opacity: 0;
 }
 
-.intro-effect-sliced.modify .content > div {
+.intro-effect-sliced.modify .awesome-content > * {
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 	opacity: 1;
 }
 
 /* Delays */
-.intro-effect-sliced.modify:not(.notrans) .title {
+.intro-effect-sliced.modify:not(.notrans) .awesome-title {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
@@ -539,7 +541,7 @@ button.trigger span::before {
 /* -------------------------- */
 
 .intro-effect-side:not(.notrans) .bg-img::before,
-.intro-effect-side:not(.notrans) .title {
+.intro-effect-side:not(.notrans) .awesome-title {
 	-webkit-transition-property: -webkit-transform;
 	transition-property: transform;
 }
@@ -549,21 +551,21 @@ button.trigger span::before {
 	transition-property: top, left, bottom, right, background-color;
 }
 
-.intro-effect-side:not(.notrans) .header p {
+.intro-effect-side:not(.notrans) .awesome-header p {
 	-webkit-transition-property: -webkit-transform, opacity;
 	transition-property: transform, opacity;
 }
 
-.intro-effect-side:not(.notrans) .content > div {
+.intro-effect-side:not(.notrans) .awesome-content > * {
 	-webkit-transition-property: opacity;
 	transition-property: opacity;
 }
 
 .intro-effect-side:not(.notrans) .bg-img::before,
 .intro-effect-side:not(.notrans) .bg-img::after,
-.intro-effect-side:not(.notrans) .title,
-.intro-effect-side:not(.notrans) .header p,
-.intro-effect-side:not(.notrans) .content > div {
+.intro-effect-side:not(.notrans) .awesome-title,
+.intro-effect-side:not(.notrans) .awesome-header p,
+.intro-effect-side:not(.notrans) .awesome-content > * {
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	-webkit-transition-duration: 0.5s;
@@ -611,7 +613,7 @@ button.trigger span::before {
 }
 
 
-.intro-effect-side .title {
+.intro-effect-side .awesome-title {
 	text-align: right;
 	left: 0;
 	padding: 0 3em 0 2em;
@@ -620,12 +622,12 @@ button.trigger span::before {
 	transform: translateX(33.3%) translateY(-50%);
 }
 
-.intro-effect-side.modify .title {
+.intro-effect-side.modify .awesome-title {
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
-.intro-effect-side .header h1 {
+.intro-effect-side .awesome-header h1 {
 	font-family: 'Lora', serif;
 	font-style: italic;
 	font-weight: 400;
@@ -633,25 +635,25 @@ button.trigger span::before {
 	color: #516165;
 }
 
-.intro-effect-side .header p {
+.intro-effect-side .awesome-header p {
 	opacity: 0;
 	color: #7b8d92;
 	-webkit-transform: translateY(100px);
 	transform: translateY(100px);
 }
 
-.intro-effect-side.modify .header p {
+.intro-effect-side.modify .awesome-header p {
 	opacity: 1;
 	-webkit-transform: translateX(0);
 	transform: translateX(0);
 }
 
-.intro-effect-side .content > div {
+.intro-effect-side .awesome-content > * {
 	margin-top: 0px;
 	opacity: 0;
 }
 
-.intro-effect-side.modify .content > div {
+.intro-effect-side.modify .awesome-content > * {
 	opacity: 1;
 }
 
@@ -661,31 +663,31 @@ button.trigger span::before {
 }
 
 /* Delays */
-.intro-effect-side:not(.notrans) .title,
+.intro-effect-side:not(.notrans) .awesome-title,
 .intro-effect-side:not(.notrans) .bg-img::before,
 .intro-effect-side:not(.notrans) .bg-img::after {
 	-webkit-transition-delay: 0.3s;
 	transition-delay: 0.3s;
 }
 
-.intro-effect-side.modify:not(.notrans) .title,
+.intro-effect-side.modify:not(.notrans) .awesome-title,
 .intro-effect-side.modify:not(.notrans) .bg-img::before,
 .intro-effect-side.modify:not(.notrans) .bg-img::after {
 	-webkit-transition-delay: 0s;
 	transition-delay: 0s;
 }
 
-.intro-effect-side.modify:not(.notrans) .header p:nth-last-child(2) {
+.intro-effect-side.modify:not(.notrans) .awesome-header p:nth-last-child(2) {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
 
-.intro-effect-side.modify:not(.notrans) .header p:last-child {
+.intro-effect-side.modify:not(.notrans) .awesome-header p:last-child {
 	-webkit-transition-delay: 0.2s;
 	transition-delay: 0.2s;
 }
 
-.intro-effect-side.modify:not(.notrans) .content > div {
+.intro-effect-side.modify:not(.notrans) .awesome-content > * {
 	-webkit-transition-delay: 0.3s;
 	transition-delay: 0.3s;
 }
@@ -703,27 +705,27 @@ button.trigger span::before {
 	transition-property: transform;
 }
 
-.intro-effect-sidefixed:not(.notrans) .title p {
+.intro-effect-sidefixed:not(.notrans) .awesome-title p {
 	-webkit-transition-property: opacity;
 	transition-property: opacity;
 }
 
-.intro-effect-sidefixed:not(.notrans) .content > div {
+.intro-effect-sidefixed:not(.notrans) .awesome-content > * {
 	-webkit-transition-property: -webkit-transform, opacity;
 	transition-property: transform, opacity;
 }
 
 .intro-effect-sidefixed:not(.notrans) .bg-img::before,
 .intro-effect-sidefixed:not(.notrans) .bg-img::after,
-.intro-effect-sidefixed:not(.notrans) .title p,
-.intro-effect-sidefixed:not(.notrans) .content > div {
+.intro-effect-sidefixed:not(.notrans) .awesome-title p,
+.intro-effect-sidefixed:not(.notrans) .awesome-content > * {
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 }
 
-.intro-effect-sidefixed .header {
+.intro-effect-sidefixed .awesome-header {
 	position: absolute;
 }
 
@@ -770,7 +772,7 @@ button.trigger span::before {
 
 
 
-.intro-effect-sidefixed .title {
+.intro-effect-sidefixed .awesome-title {
 	position: relative;
 	top: auto;
 	left: auto;
@@ -779,46 +781,46 @@ button.trigger span::before {
 	transform: translateY(200px);
 }
 
-.intro-effect-sidefixed.modify .title {
+.intro-effect-sidefixed.modify .awesome-title {
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 }
 
-.intro-effect-sidefixed .title h1 {
+.intro-effect-sidefixed .awesome-title h1 {
 	font-family: 'Playfair Display', serif;
 	font-weight: 700;
 	padding: 0 0 0.5em 0;
 	color: #585a66;
 }
 
-.intro-effect-sidefixed .title p {
+.intro-effect-sidefixed .awesome-title p {
 	opacity: 0;
 	color: #585a66;
 }
 
-.intro-effect-sidefixed.modify .title p {
+.intro-effect-sidefixed.modify .awesome-title p {
 	opacity: 1;
 }
 
-.intro-effect-sidefixed .content {
+.intro-effect-sidefixed .awesome-content {
 	width: 60%;
 	margin-left: 40%;
 	padding: 0 2.5em;
 }
 
-.intro-effect-sidefixed .content div {
+.intro-effect-sidefixed .awesome-content div {
 	position: relative;
 	margin: 70px 0;
 	color: #77726b;
 }
 
-.intro-effect-sidefixed .content div:nth-child(2) {
+.intro-effect-sidefixed .awesome-content div:nth-child(2) {
 	opacity: 0;
 	-webkit-transform: translateY(200px);
 	transform: translateY(200px);
 }
 
-.intro-effect-sidefixed.modify .content div:nth-child(2) {
+.intro-effect-sidefixed.modify .awesome-content div:nth-child(2) {
 	opacity: 1;
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
@@ -826,21 +828,21 @@ button.trigger span::before {
 
 
 /* Delays */
-.intro-effect-sidefixed:not(.notrans) .title,
+.intro-effect-sidefixed:not(.notrans) .awesome-title,
 .intro-effect-sidefixed:not(.notrans) .bg-img::before,
 .intro-effect-sidefixed:not(.notrans) .bg-img::after {
 	-webkit-transition-delay: 0.3s;
 	transition-delay: 0.3s;
 }
 
-.intro-effect-sidefixed.modify:not(.notrans) .title,
+.intro-effect-sidefixed.modify:not(.notrans) .awesome-title,
 .intro-effect-sidefixed.modify:not(.notrans) .bg-img::before,
 .intro-effect-sidefixed.modify:not(.notrans) .bg-img::after {
 	-webkit-transition-delay: 0s;
 	transition-delay: 0s;
 }
 
-.intro-effect-sidefixed.modify:not(.notrans) .content div:nth-child(2) {
+.intro-effect-sidefixed.modify:not(.notrans) .awesome-content div:nth-child(2) {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
@@ -848,16 +850,16 @@ button.trigger span::before {
 /* -------------------------- */
 /* Push */
 /* -------------------------- */
-.intro-effect-push:not(.notrans) .header,
-.intro-effect-push:not(.notrans) > .title,
-.intro-effect-push:not(.notrans) .content > div {
+.intro-effect-push:not(.notrans) .awesome-header,
+.intro-effect-push:not(.notrans) > .awesome-title,
+.intro-effect-push:not(.notrans) .awesome-content > * {
 	-webkit-transition-property: opacity, -webkit-transform;
 	transition-property: opacity, transform;
 	-webkit-transition-duration: 1s;
 	transition-duration: 1s;
 }
 
-.intro-effect-push:not(.notrans) .header {
+.intro-effect-push:not(.notrans) .awesome-header {
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	-webkit-transition-duration: 1.2s;
@@ -865,50 +867,50 @@ button.trigger span::before {
 }
 
 
-.intro-effect-push .header {
+.intro-effect-push .awesome-header {
 	position: absolute;
 	z-index: 1500;
 }
 
-.intro-effect-push > .title {
+.intro-effect-push > .awesome-title {
 	position: relative;
 	top: auto;
 	left: auto;
 	padding: 3em 1em 2em;
 }
 
-.intro-effect-push .content > div {
+.intro-effect-push .awesome-content > * {
 	margin-top: 50px;
 	color: #b2b2c0;
 }
 
-.intro-effect-push > .title,
-.intro-effect-push .content > div {
+.intro-effect-push > .awesome-title,
+.intro-effect-push .awesome-content > * {
 	-webkit-transform: translateY(400px);
 	transform: translateY(400px);
 	opacity: 0;
 }
 
-.intro-effect-push.modify > .title,
-.intro-effect-push.modify .content > div {
+.intro-effect-push.modify > .awesome-title,
+.intro-effect-push.modify .awesome-content > * {
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 	opacity: 1;
 }
 
-.intro-effect-push.modify .header {
+.intro-effect-push.modify .awesome-header {
 	opacity: 0;
 	-webkit-transform: translateY(-100%) scale(0.9);
 	transform: translateY(-100%) scale(0.9);
 }
 
 /* Delays */
-.intro-effect-push.modify:not(.notrans) > .title {
+.intro-effect-push.modify:not(.notrans) > .awesome-title {
 	-webkit-transition-delay: 0.5s;
 	transition-delay: 0.5s;
 }
 
-.intro-effect-push.modify:not(.notrans) .content > div {
+.intro-effect-push.modify:not(.notrans) .awesome-content > * {
 	-webkit-transition-delay: 0.6s;
 	transition-delay: 0.6s;
 }
@@ -922,27 +924,27 @@ button.trigger span::before {
 	transition-property: transform, opacity;
 }
 
-.intro-effect-grid:not(.notrans) .header p  {
+.intro-effect-grid:not(.notrans) .awesome-header p  {
 	-webkit-transition-property: opacity;
 	transition-property: opacity;
 }
 
 .intro-effect-grid:not(.notrans) .bg-img,
-.intro-effect-grid:not(.notrans) .title {
+.intro-effect-grid:not(.notrans) .awesome-title {
 	-webkit-transition-property: -webkit-transform;
 	transition-property: transform;
 }
 
-.intro-effect-grid:not(.notrans) .header h1{
+.intro-effect-grid:not(.notrans) .awesome-header h1{
 	-webkit-transition-property: color;
 	transition-property: color;
 }
 
 .intro-effect-grid:not(.notrans) .grid li:nth-child(5),
 .intro-effect-grid:not(.notrans) .bg-img,
-.intro-effect-grid:not(.notrans) .title,
-.intro-effect-grid:not(.notrans) .header h1,
-.intro-effect-grid:not(.notrans) .header p {
+.intro-effect-grid:not(.notrans) .awesome-title,
+.intro-effect-grid:not(.notrans) .awesome-header h1,
+.intro-effect-grid:not(.notrans) .awesome-header p {
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	-webkit-transition-duration: 1s;
@@ -951,41 +953,41 @@ button.trigger span::before {
 
 
 
-.intro-effect-grid .title {
+.intro-effect-grid .awesome-title {
 	max-width: 900px;
 	padding-top: 2em;
 }
 
-.intro-effect-grid.modify .title {
+.intro-effect-grid.modify .awesome-title {
 	-webkit-transform: translateX(-50%) translateY(0);
 	transform: translateX(-50%) translateY(0);
 }
 
-.intro-effect-grid .content > div {
+.intro-effect-grid .awesome-content > * {
 	margin-top: 40px;
 	color: #2e3337;
 }
 
-.intro-effect-grid .header h1 {
+.intro-effect-grid .awesome-header h1 {
 	font-family: 'Playfair Display', serif;
 	font-weight: 700;
 	padding: 0 0 0.6em;
 }
 
-.intro-effect-grid.modify .header h1 {
+.intro-effect-grid.modify .awesome-header h1 {
 	color: #2d3b44;
 }
 
-.intro-effect-grid .header p {
+.intro-effect-grid .awesome-header p {
 	opacity: 0;
 	color: #4c6270;
 }
 
-.intro-effect-grid .header p.subline {
+.intro-effect-grid .awesome-header p.subline {
 	font-size: 1.5em;
 }
 
-.intro-effect-grid.modify .header p {
+.intro-effect-grid.modify .awesome-header p {
 	opacity: 1;
 }
 
@@ -1120,7 +1122,7 @@ button.trigger span::before {
 @media screen and (max-width: 47em) {
 
 
-	.intro-effect-side .title {
+	.intro-effect-side .awesome-title {
 		width: 100%;
 		padding: 0 1em;
 		-webkit-transform: translateY(-50%);
@@ -1144,7 +1146,7 @@ button.trigger span::before {
 		background: rgba(255,255,255,0.8);
 	}
 
-	.intro-effect-sidefixed .content {
+	.intro-effect-sidefixed .awesome-content {
 		width: 100%;
 		margin-left: auto;
 	}
@@ -1156,7 +1158,7 @@ button.trigger span::before {
 }
 
 @media screen and (max-width: 27em) {
-	.intro-effect-jam3 .content {
+	.intro-effect-jam3 .awesome-content {
 		padding: 0 2em 5em;
 	}
 
@@ -1164,7 +1166,7 @@ button.trigger span::before {
 		display: none;
 	}
 
-	.intro-effect-push .header .title {
+	.intro-effect-push .awesome-header .awesome-title {
 		top: 60px;
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);
